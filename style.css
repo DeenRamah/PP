@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.5s;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.05);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+#passwordStrength {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #777;
+}
+
+button {
+    background-color: #ff8c8c;
+    color: #fff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff6f6f;
+}
+
+/* Password strength meter styles */
+#passwordStrength::before {
+    content: "Password Strength: ";
+    font-weight: bold;
+}
+
+#passwordStrength span {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    margin: 0 2px;
+}
+
+.weak {
+    background-color: #ffbebe;
+}
+
+.medium {
+    background-color: #ffd47c;
+}
+
+.strong {
+    background-color: #a3ff7c;
+}
+
+/* Toggle password visibility styles */
+#togglePassword {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 8px;
+    color: #555;
+}
+
+#togglePassword:hover {
+    color: #777;
+}
+
+/* Gender-specific background styles */
+body[data-gender="male"] {
+    background: url('male_background.jpg') no-repeat center center fixed;
+}
+
+body[data-gender="female"] {
+    background: url('female_background.jpg') no-repeat center center fixed;
+}

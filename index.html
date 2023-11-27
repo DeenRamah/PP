@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-gender="male">
+
+    <form id="loginForm" action="process_form.php" method="post" onsubmit="validateForm(event)">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" onchange="changeBackground()" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" oninput="checkPasswordStrength()" required>
+        <div id="passwordStrength"></div>
+
+        <label for="showPassword" id="togglePassword">
+            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+            Show Password
+        </label>
+
+        <button type="submit">Login</button>
+
+        <script src="script.js"></script>
+    </form>
+
+</body>
+</html>
